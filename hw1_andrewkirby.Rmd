@@ -1,0 +1,54 @@
+```{r}
+# Part 1
+
+# 1
+(1/3)+(1/4)
+# 2
+2^10+1
+# 3
+f <- 440
+
+(1127)*log(1+f/700)
+
+# 4
+a <- 2
+b <- 4
+c <- -4
+
+(-b+(sqrt(b^2-4*a*c)))/(2*a)
+```
+
+```{r}
+# Part 2
+
+NYC <- read.csv('http://wellformedness.com/courses/LING82100/Data/NYC.csv', header = TRUE)
+table(NYC)
+
+# 1
+# How many times did employees at the three department stores userin the word “fourth”in the emphatic condition?
+6+13+16
+
+# 2
+# What percentage of the time did employees at S. Klein’s userin the word “floor”?
+(7+5)/(59+33+5+7)
+```
+
+```{r}
+#Part 3
+VOT <- read.table('http://wellformedness.com/courses/LING82100/Data/VOT.tsv', header = TRUE)
+print(VOT)
+
+# 1
+# Sample quartiles for VOT (NB: the 2nd quartile, AKA the 50% percentile, is the median)
+quantile(VOT$vot)
+
+# 2
+# The mean of Spanish speakers’ VOTs
+spanishVOT <- subset(VOT, language=="spanish")
+mean(spanishVOT$vot)
+
+# 3
+# The (sample) standard deviation of English speakers’ VOTs
+englishVOT <- subset(VOT, language=="english")
+sd(englishVOT$vot)
+```
